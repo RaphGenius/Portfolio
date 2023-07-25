@@ -5,8 +5,15 @@ type Props = {
 };
 function SectionLayout({ children, title, id }: PropsWithChildren<Props>) {
   return (
-    <section id={id} className="min-h-screen px-20">
-      <h2 className="font-roboto text-xl text-main500">{title} </h2>
+    <section
+      id={id}
+      className="mx-auto min-h-screen max-w-screen-2xl pt-16 px-20"
+    >
+      <h2
+        className={`ml-8 font-roboto text-xl relative text-main500 after:content-[""] mb-4 font-bold after:absolute after:w-1/2 after:h-[1px] after:bg-main500 after:top-1/2 after:ml-4 `}
+      >
+        {title}{" "}
+      </h2>
       {children}
     </section>
   );

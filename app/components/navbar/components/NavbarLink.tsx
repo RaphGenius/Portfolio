@@ -13,9 +13,7 @@ function NavbarLink({ tagId, name, itemNumber }: Props) {
     NavbarContext
   ) as navbarContextType;
   const isSelectedStyle = tagIdSelected === tagId && "font-bold";
-  useEffect(() => {
-    console.log(tagIdSelected);
-  }, [tagIdSelected]);
+
   return (
     <li className="hover:-translate-y-1 transition-transform duration-200 ">
       <Link
