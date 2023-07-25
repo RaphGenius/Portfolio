@@ -1,6 +1,7 @@
+export type tagIdType = "#about" | "#projets" | "#contact" | "#home";
 export type navbarDataType = {
   name: string;
-  tagId: string;
+  tagId: tagIdType;
   itemNumber: number;
   id: number;
 };
