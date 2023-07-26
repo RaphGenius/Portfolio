@@ -29,11 +29,11 @@ function Navbar() {
   const navbarIsVisible = isVisible
     ? "-translate-y-1 opacity-100 "
     : "-translate-y-16 opacity-0 ";
-  const shawodNavbar = prevScroll > 10 ? "shadow-xl h-14" : "h-20";
+  const shawodNavbar = prevScroll > 10 ? "shadow-xl " : "";
 
   return (
     <nav
-      className={`w-full sticky z-50 top-0 ${navbarIsVisible} ${shawodNavbar}   transition-all duration-200 backdrop-blur-md scale-y-95   `}
+      className={`w-full sticky z-50 top-0 ${navbarIsVisible} ${shawodNavbar} h-16   transition-all duration-200 backdrop-blur-md `}
     >
       <div className="flex h-full items-center justify-between px-8">
         <div

@@ -4,7 +4,7 @@ import React from "react";
 
 function Header() {
   return (
-    <header className=" px-2 min-h-screen relative  flex flex-col  max-w-screen-2xl mx-auto ">
+    <header className=" px-2 min-h-[calc(100vh/2)] relative  flex flex-col  max-w-screen-2xl mx-auto ">
       <div id="home" className=" mt-10  my-auto  p-8  ">
         <h1 className="text-5xl uppercase font-roboto text-main300 font-bold  w-fit ">
           Raphaël Guet

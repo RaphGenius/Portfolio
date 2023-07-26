@@ -4,6 +4,7 @@ import NavbarProvider from "./context/navbarContext";
 import AboutSection from "./sections/about";
 import Header from "./sections/header";
 import SectionLayout from "./sections/layout";
+import ProjectsSection from "./sections/projects";
 
 export default function Home() {
   return (
@@ -12,14 +13,16 @@ export default function Home() {
         <Navbar />
         <SideInformations />
         <Header />
-        <SectionLayout title="A propos de moi" id="about">
+
+        <SectionLayout number={1} title={` A propos de moi`} id="about">
           <AboutSection />
         </SectionLayout>
-        <SectionLayout title="Projets" id="projets">
-          Mes projets{" "}
+
+        <SectionLayout number={2} title=" Mes Projets" id="projets">
+          <ProjectsSection />
         </SectionLayout>
-        <SectionLayout title="Me contacter" id="contact">
-          {" "}
+
+        <SectionLayout number={3} title=" Me contacter" id="contact">
           Me contacter{" "}
         </SectionLayout>
       </main>
