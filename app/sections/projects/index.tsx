@@ -3,7 +3,7 @@ import { projectsData } from "./projectsData";
 import ArticleProject from "./components/ArticleProject";
 function ProjectsSection() {
   return (
-    <div className=" flex flex-col gap-8">
+    <div className=" flex flex-col gap-4 md:gap-8">
       {projectsData.map(
         ({ title, description, stacksUsed, image, url, id }) => (
           <ArticleProject

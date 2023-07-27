@@ -1,6 +1,8 @@
 "use client";
 import React, { FormEvent, useRef, useState, RefObject } from "react";
 import emailjs from "@emailjs/browser";
+import LabelForm from "./components/LabelForm";
+import InputTextForm from "./components/InputTextForm";
 function ContactSection() {
   const [isLoading, setIsLoading] = useState(false);
   const [isSent, setIsSent] = useState(false);
@@ -35,34 +37,35 @@ function ContactSection() {
     <div className="mb-20  w-full">
       <form onSubmit={sendEmail} ref={form}>
         <div className="mb-3 pt-0">
-          <input
-            type="text"
+          <LabelForm title="Nom" id="name" />
+          <InputTextForm
             placeholder="Votre nom / nom de société"
+            id="name"
             name="name"
-            className="px-3 py-3  focus:outline-main500 focus:outline-3 placeholder-gray-400 text-gray-600 relative   rounded text-sm border-0 shadow outline-none focus:outline-none  w-full"
-            required
           />
         </div>
         <div className="mb-3 pt-0">
-          <input
-            type="email"
-            placeholder="Adresse@Mail.com"
+          <LabelForm title="email" id="email" />
+          <InputTextForm
+            placeholder="adresse@mail.com"
+            id="email"
             name="email"
-            className="px-3 py-3  focus:outline-main500 focus:outline-3 placeholder-gray-400 text-gray-600 relative   rounded text-sm border-0 shadow outline-none focus:outline-none  w-full"
-            required
           />
         </div>
         <div className="mb-3 pt-0">
+          <LabelForm title="Votre message" id="message" />
           <textarea
             placeholder="Votre message"
+            id="message"
             name="message"
-            className="px-3 py-3  focus:outline-main500 focus:outline-3 placeholder-gray-400 text-gray-600 relative   rounded text-sm border-0 shadow outline-none focus:outline-none  w-full"
+            className="px-3 py-3  focus:outline-main500 focus:outline-3 placeholder-gray-400 text-gray-600 relative   rounded text-sm border-0 shadow outline-none focus:outline-none mt-4  w-full"
             required
             cols={5}
           />
         </div>
         <div className="mb-3 pt-0">
           <button
+            disabled={isLoading}
             className="bg-main500 text-white active:bg-main500 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
             type="submit"
           >

@@ -1,5 +1,3 @@
-import ArrowItem from "@/app/components/items/ArrowItem";
-import HighLine from "@/app/components/text/HighLine";
 import { getColorByWord } from "@/app/utils/getColorByWords";
 import React from "react";
 
@@ -7,13 +5,14 @@ function Header() {
   return (
     <header className=" px-2  relative  flex flex-col  max-w-screen-xl mx-auto ">
       <div id="home" className=" mt-10  my-auto  p-8  ">
-        <h1 className="text-5xl uppercase font-roboto text-main300 font-bold  w-fit ">
+        <h1 className="text-5xl   uppercase font-roboto text-main300 font-bold  w-full text-center  md:w-fit ">
           Raphaël Guet
         </h1>
-        <h2 className="text-3xl font-extralight text-main500 ml-10  mt-8   ">
+        <h2 className="text-3xl font-extralight text-main500 md:ml-10   mt-8 text-center md:text-start  ">
           Développeur Front-End
         </h2>
-        <p className="ml-20  font-roboto text-tertiary mt-8 ">
+
+        <p className="md:ml-20  font-roboto text-tertiary mt-8 ">
           Je suis un développeur front-end spécialisé dans{" "}
           {getColorByWord("React")}, {getColorByWord("NextJs")},{" "}
           {getColorByWord("Javascript")} & {getColorByWord("NodeJS")}. Passionné

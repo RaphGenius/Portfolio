@@ -4,19 +4,19 @@ import React from "react";
 import { FiGithub } from "react-icons/fi";
 function Footer() {
   return (
-    <footer className="mx-auto max-w-screen-xl py-10   px-20">
-      <div className="flex flex-col justify-center items-center font-bold text-main300 text-xl">
-        <p>
+    <footer className="mx-auto max-w-screen-xl pt-10 pb-4  px-8 md:px-20">
+      <div className="flex flex-col justify-center items-center font-semibold text-main300 text-xs md:text-sm ">
+        <p className="text-center">
           Portefolio réalisé {getColorByWord("NextJs")},
           {getColorByWord("Tailwind")}, emailJS & FramerMotion
         </p>
-        <p className="flex items-center">
+        <h2 className="flex items-center gap-2">
           par Raphaël Guet{" "}
           <SocialMediaIcon
             icon={<FiGithub />}
             link="https://github.com/RaphGenius"
           />{" "}
-        </p>
+        </h2>
       </div>
     </footer>
   );

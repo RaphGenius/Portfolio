@@ -41,10 +41,10 @@ function ArticleProject({
 
   return (
     <article
-      className={`relative flex mx-auto min-h-[300px] ${orientationObject[orientation].flex} `}
+      className={`relative  flex mx-auto min-h-[300px] ${orientationObject[orientation].flex} `}
     >
-      <div className="w-3/5 my-auto  gap-2 z-30 px-4">
-        <div className="bg-main300 rounded-lg p-8 ">
+      <div className=" w-auto md:w-3/5 my-auto  gap-2 z-30 md:px-4">
+        <div className="bg-main300 rounded-lg p-4 lg:p-8 ">
           <h3
             className={`font-bold font-roboto text-3xl mb-4 text-bgColor ${orientationObject[orientation].text} `}
           >
@@ -52,7 +52,7 @@ function ArticleProject({
           </h3>
           <div>
             <p
-              className={`font-roboto ${orientationObject[orientation].text} `}
+              className={`font-roboto text-sm md:text-base ${orientationObject[orientation].text} `}
             >
               {description}
             </p>
@@ -76,7 +76,7 @@ function ArticleProject({
         </div>
       </div>
       <div
-        className={`w-2/5 grayscale hover:grayscale-0  opacity-80 hover:opacity-100 transition  ${orientationObject[orientation].positon} `}
+        className={`hidden md:block md:w-2/5 grayscale hover:grayscale-0  opacity-80 hover:opacity-100 transition  ${orientationObject[orientation].positon} `}
       >
         <Link target="_blank" href={url.project}>
           <Image

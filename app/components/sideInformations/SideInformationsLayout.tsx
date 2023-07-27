@@ -10,7 +10,9 @@ function SideInformationsLayout({
   const orientationItem =
     orientation === "left" ? "left-[20px]" : "right-[20px]";
   return (
-    <div className={`fixed bottom-0 w-5   ${orientationItem} `}>{children}</div>
+    <div className={`fixed bottom-0 w-0 lg:w-5   ${orientationItem} `}>
+      {children}
+    </div>
   );
 }
 

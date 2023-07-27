@@ -15,10 +15,10 @@ function NavbarLink({ tagId, name, itemNumber }: Props) {
   const isSelectedStyle = tagIdSelected === tagId && "font-bold";
 
   return (
-    <li className="hover:-translate-y-1 transition-transform duration-200 ">
+    <li className="md:hover:-translate-y-1 transition-transform duration-200 ">
       <Link
         onClick={() => switchTagid(tagId)}
-        className={`flex gap-1 hover:opacity-80 transition-opacity items-baseline mr-2 text-lg ${isSelectedStyle}  `}
+        className={`flex gap-1 hover:opacity-80 transition-opacity items-baseline mr-2 lg:text-xl md:text-lg ${isSelectedStyle}  `}
         href={tagId}
       >
         <NumberSection number={itemNumber} />

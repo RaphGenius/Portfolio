@@ -1,13 +1,25 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { navbarData } from "./data";
 import NavbarLink from "./components/NavbarLink";
-import Link from "next/link";
 import { scrollToDirection } from "@/app/utils/scrollTo";
+import { FaBars } from "react-icons/fa";
+import Logo from "../items/Logo";
+import SidebarMobile from "./components/SidebarMobile";
+import { NavbarContext } from "@/app/context/navbarContext";
+import { navbarContextType } from "@/app/types/navbarContextType";
 
 function Navbar() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [prevScroll, setPrevScroll] = useState(0);
+  const { tagIdSelected } = useContext(NavbarContext) as navbarContextType;
+
+  const switchSidebar = () => setIsSidebarOpen((prev) => !prev);
+
+  useEffect(() => {
+    setIsSidebarOpen(false);
+  }, [tagIdSelected]);
 
   const handleScroll = () => {
     const currentScrollPos = window.scrollY;
@@ -35,20 +47,25 @@ function Navbar() {
     <nav
       className={`w-full sticky z-50 top-0 ${navbarIsVisible} ${shawodNavbar} h-16   transition-all duration-200 backdrop-blur-md `}
     >
-      <div className="flex h-full items-center justify-between px-8">
-        <div
-          role="logo"
-          onClick={() => scrollToDirection("top")}
-          className="w-10 h-8  text-main500 font-bold cursor-pointer p-4 border-2 border-main500 hover:bg-main300 transition-colors hover:text-bgColor rounded-sm text-sm flex justify-center items-center"
-        >
-          RG
-        </div>
-        <ul className="flex gap-2">
+      <div className="h-full flex items-center justify-between px-8  ">
+        <Logo handleClick={() => scrollToDirection("top")} />
+        {/* Nav leftside Desktop */}
+        <ul className="  hidden md:flex  gap-2">
           {navbarData.map(({ id, ...rest }) => (
             <NavbarLink key={id} {...rest} />
           ))}
         </ul>
+        {/* Nav leftside Mobile */}
+        <button
+          onClick={switchSidebar}
+          className="text-main500 border-2 md:hidden bl  border-main500 z-50 p-2"
+          role="Ouvre sidebar"
+        >
+          <FaBars />{" "}
+        </button>
       </div>
+
+      <SidebarMobile isSidebarOpen={isSidebarOpen} />
     </nav>
   );
 }
