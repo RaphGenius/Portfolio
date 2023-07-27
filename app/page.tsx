@@ -2,6 +2,8 @@ import Navbar from "./components/navbar";
 import SideInformations from "./components/sideInformations";
 import NavbarProvider from "./context/navbarContext";
 import AboutSection from "./sections/about";
+import ContactSection from "./sections/contact";
+import Footer from "./sections/footer";
 import Header from "./sections/header";
 import SectionLayout from "./sections/layout";
 import ProjectsSection from "./sections/projects";
@@ -23,8 +25,9 @@ export default function Home() {
         </SectionLayout>
 
         <SectionLayout number={3} title=" Me contacter" id="contact">
-          Me contacter{" "}
+          <ContactSection />
         </SectionLayout>
+        <Footer />
       </main>
     </NavbarProvider>
   );

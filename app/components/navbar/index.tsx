@@ -37,16 +37,16 @@ function Navbar() {
     >
       <div className="flex h-full items-center justify-between px-8">
         <div
+          role="logo"
           onClick={() => scrollToDirection("top")}
-          className="w-10 h-8 cursor-pointer bg-red-100 text-sm flex justify-center items-center"
+          className="w-10 h-8  text-main500 font-bold cursor-pointer p-4 border-2 border-main500 hover:bg-main300 transition-colors hover:text-bgColor rounded-sm text-sm flex justify-center items-center"
         >
-          Logo
+          RG
         </div>
         <ul className="flex gap-2">
           {navbarData.map(({ id, ...rest }) => (
             <NavbarLink key={id} {...rest} />
           ))}
-          <li>Mon CV</li>
         </ul>
       </div>
     </nav>

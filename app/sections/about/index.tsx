@@ -1,11 +1,9 @@
 import React from "react";
 import Paragraphe from "../layout/text/Paragraphe";
-import HighLine from "@/app/components/text/HighLine";
-import cssLogo from "../../../public/logo/CSS3_logo.svg";
-import Image from "next/image";
 import { logoData } from "./logoData";
 import Logo from "./components/Logo";
 import Subtitle from "@/app/components/text/Subtitle";
+import { getColorByWord } from "@/app/utils/getColorByWords";
 function AboutSection() {
   return (
     <article className="flex justify-between w-full gap-8">
@@ -21,13 +19,12 @@ function AboutSection() {
         </Paragraphe>
         <Paragraphe>
           Autodidacte depuis toujours, j&apos;ai rapidement appris le{" "}
-          <HighLine text="HTMl" color="text-[#ee5f25]" /> et{" "}
-          <HighLine text="CSS" color="text-[#08a7e2]" />. Le{" "}
-          <HighLine text="Javascript" color="text-yellow-500" /> m&apos;a
-          apporté ce que j&apos;attends d&apos;une passion, de la complexité et
-          de quoi passer beaucoup de temps à se creuser la tête à résoudre des
-          problèmes, à créer des choses qui sortent de mon imagination. <br />
-          React a ensuite été mon gros coup de coeur!
+          {getColorByWord("HTML")} et {getColorByWord("CSS")}. Le{" "}
+          {getColorByWord("Javascript")} m&apos;a apporté ce que j&apos;attends
+          d&apos;une passion, de la complexité et de quoi passer beaucoup de
+          temps à se creuser la tête à résoudre des problèmes, à créer des
+          choses qui sortent de mon imagination. <br />
+          {getColorByWord("React")} a ensuite été mon gros coup de coeur!
         </Paragraphe>
         <Paragraphe>
           Toujours avide de nouveaux défis, je cherche continuellement à

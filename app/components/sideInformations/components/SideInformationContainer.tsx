@@ -1,7 +1,4 @@
 import React, { PropsWithChildren } from "react";
-import { FiGithub, FiTwitter, FiLinkedin } from "react-icons/fi";
-import { leftSideInformation } from "./data";
-import SocialMediaIcon from "./SocialMediaIcon";
 
 function SideInformationContainer({ children }: PropsWithChildren) {
   return (
