@@ -1,8 +1,8 @@
 import { StaticImageData } from "next/image";
-import movieImage from "../../../public/projectIllustration/movies01.jpg";
-import marketImage from "../../../public/projectIllustration/market01.jpg";
-import crayonImage from "../../../public/projectIllustration/crayon01.jpg";
-import todoImage from "../../../public/projectIllustration/todo01.jpg";
+import movieImage from "../../../public/projectIllustration/moviesImage.jpg";
+import marketImage from "../../../public/projectIllustration/marketImage.jpg";
+import crayonImage from "../../../public/projectIllustration/crayonImage.jpg";
+import todoImage from "../../../public/projectIllustration/todoImage.jpg";
 export type projectsDataType = {
   title: string;
   description: string;
