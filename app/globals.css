@@ -7,3 +7,24 @@ html,
 body {
   scroll-behavior: smooth;
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-bgColor;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-main300;
+  border-radius: 2px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-main500;
+}

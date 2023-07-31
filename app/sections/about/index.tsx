@@ -2,13 +2,11 @@ import React from "react";
 import Paragraphe from "../layout/text/Paragraphe";
 import { logoData } from "./logoData";
 import Logo from "./components/Logo";
-import Subtitle from "@/app/components/text/Subtitle";
 import { getColorByWord } from "@/app/utils/getColorByWords";
 function AboutSection() {
   return (
-    <article className="flex md:flex-row flex-col  justify-between w-full gap-8">
-      <div className=" w-full md:w-1/2 bg-gradient-to-t h-full from-main500/5 to-main300/10 p-2 rounded-tl-xl rounded-br-xl ">
-        <Subtitle text="Je parle de moi !" />
+    <article className="flex md:flex-row flex-col justify-between w-full gap-8">
+      <div className=" w-full md:w-1/2 bg-gradient-to-t h-full from-main500/5 to-main300/10 p-8 rounded-xl ">
         <Paragraphe>
           Je m&apos;appelle{" "}
           <span className="text-main300  font-bold">Raphaël</span>, et ce que
@@ -31,13 +29,12 @@ function AboutSection() {
           apprendre de nouvelles choses et à perfectionner mon art ! 😊
         </Paragraphe>
       </div>
-      <div className=" w-full md:w-1/2 bg-gradient-to-b  from-main500/5 to-main300/10 p-2 ">
-        <Subtitle text="Mes stacks" />
-        <div className=" grid gap-4 grid-cols-3 h-fit  mt-2">
+      <div className=" w-full md:w-1/2 bg-gradient-to-b h-auto from-main500/5 to-main300/10 rounded-xl p-4 ">
+        <ul className=" grid gap-10 grid-cols-3     mt-2">
           {logoData.map(({ url, alt }) => (
             <Logo key={alt} url={url} alt={alt} width={90} />
           ))}
-        </div>
+        </ul>
       </div>
     </article>
   );

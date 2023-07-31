@@ -11,7 +11,7 @@ import ProjectsSection from "./sections/projects";
 export default function Home() {
   return (
     <NavbarProvider>
-      <main id="home" className="bg-bgColor relative ">
+      <main id="home" className="bg-bgColor relative  ">
         <Navbar />
         <SideInformations />
         <Header />

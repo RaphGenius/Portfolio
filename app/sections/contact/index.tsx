@@ -7,7 +7,6 @@ function ContactSection() {
   const [isLoading, setIsLoading] = useState(false);
   const [isSent, setIsSent] = useState(false);
   const form = useRef() as RefObject<HTMLFormElement>;
-  console.log(process.env.EMAILJS_SERVICE_ID);
   const sendEmail = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsLoading(true);

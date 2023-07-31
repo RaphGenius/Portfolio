@@ -7,9 +7,9 @@ type Props = {
 };
 function Logo({ width, url, alt }: Props) {
   return (
-    <div className="hover:backdrop-blur-xl flex items-center justify-center">
+    <li className="hover:backdrop-blur-xl flex items-center justify-center">
       <Image width={width} src={url} alt={alt} />
-    </div>
+    </li>
   );
 }
 export default Logo;

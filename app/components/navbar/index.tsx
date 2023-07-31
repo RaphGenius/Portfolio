@@ -1,6 +1,7 @@
 "use client";
 import React, { useContext, useEffect, useState } from "react";
 import { navbarData } from "./data";
+import { motion } from "framer-motion";
 import NavbarLink from "./components/NavbarLink";
 import { scrollToDirection } from "@/app/utils/scrollTo";
 import { FaBars } from "react-icons/fa";
@@ -47,22 +48,36 @@ function Navbar() {
     <nav
       className={`w-full sticky z-50 top-0 ${navbarIsVisible} ${shawodNavbar} h-16   transition-all duration-200 backdrop-blur-md `}
     >
-      <div className="h-full flex items-center justify-between px-8  ">
-        <Logo handleClick={() => scrollToDirection("top")} />
+      <div className="h-full flex items-center justify-between px-8  overflow-x-hidden ">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 2 }}
+        >
+          <Logo handleClick={() => scrollToDirection("top")} />
+        </motion.div>
         {/* Nav leftside Desktop */}
-        <ul className="  hidden md:flex  gap-2">
+        <motion.ul
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 2.2 }}
+          className="  hidden md:flex  gap-2"
+        >
           {navbarData.map(({ id, ...rest }) => (
             <NavbarLink key={id} {...rest} />
           ))}
-        </ul>
+        </motion.ul>
         {/* Nav leftside Mobile */}
-        <button
+        <motion.button
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 2.2 }}
           onClick={switchSidebar}
           className="text-main500 border-2 md:hidden bl  border-main500 z-50 p-2"
           role="Ouvre sidebar"
         >
           <FaBars />{" "}
-        </button>
+        </motion.button>
       </div>
 
       <SidebarMobile isSidebarOpen={isSidebarOpen} />

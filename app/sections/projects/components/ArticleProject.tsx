@@ -62,7 +62,7 @@ function ArticleProject({
           className={`flex gap-4 mt-2 flex-wrap ${orientationObject[orientation].flex}   `}
         >
           {stacksUsed.map((el) => (
-            <li className={`font-bold font-roboto `} key={el}>
+            <li className={`font-bold font-roboto text-xs  `} key={el}>
               {getColorByWord(el as TechnoColorType)}
             </li>
           ))}
@@ -76,7 +76,7 @@ function ArticleProject({
         </div>
       </div>
       <div
-        className={`hidden md:block md:w-2/5 grayscale hover:grayscale-0  opacity-80 hover:opacity-100 transition  ${orientationObject[orientation].positon} `}
+        className={`hidden md:block md:w-2/5 grayscale hover:grayscale-0 will-change-transform  opacity-80 hover:opacity-100 transition  ${orientationObject[orientation].positon} `}
       >
         <Link target="_blank" href={url.project}>
           <Image
