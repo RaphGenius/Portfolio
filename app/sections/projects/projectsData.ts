@@ -23,7 +23,7 @@ export const projectsData: projectsDataType[] = [
     stacksUsed: ["React", "Typescript", "Redux", "RTK-Query", "Tailwind"],
     url: {
       project: "https://movies-project-eta.vercel.app/",
-      github: "https://github.com/RaphGenius/Movies",
+      github: "https://github.com/RaphGenius/Shop",
     },
     image: Movie01,
     id: 0,
@@ -31,7 +31,7 @@ export const projectsData: projectsDataType[] = [
   {
     title: "Market",
     description:
-      "Site e-commerce proposant divers articles, avec pour chaque produit une description, un code couleur selon sa qualité. L'utilisateur peut s'inscrire et se connecter. La BDD est gérée avec Firebase.",
+      "Site e-commerce proposant divers articles, avec pour chaque produit une description, un code selon la qualité. L'utilisateur peut s'inscrire et se connecter. La BDD est gérée avec Firebase.",
     stacksUsed: [
       "React",
       "Typescript",
@@ -62,7 +62,7 @@ export const projectsData: projectsDataType[] = [
   {
     title: "Todo Liste",
     description:
-      "Simple et classique Todo Liste en ligne. L'utilisateur peut se connecter et sauvegarder les tâches qu'il lui restent. La BDD est gérée avec Firebase.",
+      "Simple et classique Todo Liste en ligne. L'utilisateur peut se connecter et sauvegarder les tâches qu'ils lui restent. Base de Données utilisateur avec Firebase.",
     stacksUsed: ["React", "Tailwind", "Framer-Motion", "Firebase"],
     url: {
       project: "https://tiny-puffpuff-f908ca.netlify.app/",
