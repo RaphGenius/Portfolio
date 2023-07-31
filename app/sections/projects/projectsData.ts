@@ -1,8 +1,8 @@
 import { StaticImageData } from "next/image";
-import Movie01 from "../../../public/projectIllustration/movies01.jpg";
-import Market01 from "../../../public/projectIllustration/market01.jpg";
-import Crayon01 from "../../../public/projectIllustration/crayon01.jpg";
-import Todo01 from "../../../public/projectIllustration/Todo01.jpg";
+import movieImage from "../../../public/projectIllustration/movies01.jpg";
+import marketImage from "../../../public/projectIllustration/market01.jpg";
+import crayonImage from "../../../public/projectIllustration/crayon01.jpg";
+import todoImage from "../../../public/projectIllustration/todo01.jpg";
 export type projectsDataType = {
   title: string;
   description: string;
@@ -25,7 +25,7 @@ export const projectsData: projectsDataType[] = [
       project: "https://movies-project-eta.vercel.app/",
       github: "https://github.com/RaphGenius/Shop",
     },
-    image: Movie01,
+    image: movieImage,
     id: 0,
   },
   {
@@ -43,7 +43,7 @@ export const projectsData: projectsDataType[] = [
       project: "https://deluxe-hotteok-a58923.netlify.app/",
       github: "https://github.com/RaphGenius/Shop",
     },
-    image: Market01,
+    image: marketImage,
     id: 1,
   },
   {
@@ -55,7 +55,7 @@ export const projectsData: projectsDataType[] = [
       project: "https://landing-page-crayon.pages.dev",
       github: "https://github.com/RaphGenius/Landing_Page",
     },
-    image: Crayon01,
+    image: crayonImage,
     id: 2,
   },
 
@@ -68,7 +68,7 @@ export const projectsData: projectsDataType[] = [
       project: "https://tiny-puffpuff-f908ca.netlify.app/",
       github: "https://github.com/RaphGenius/TodoListe",
     },
-    image: Todo01,
+    image: todoImage,
     id: 3,
   },
 ];
